@@ -1,0 +1,97 @@
+creamos el modelo Departamento asiganando una class
+luego importamos el modelo en admin
+luego agregamos la app al settings 
+luego migramos 
+verificamos en la pagina
+
+
+
+blank = True: hace que el campo no sea obligatorio
+unique = True: hace que no se pueda repetir el nombre en la app dep 
+editable = False: hace que desaparezca todo el campo para que el admin nomas pueda editar
+choice = (la variable en tupla) sirve para darte una lista que pongas y que escoja el usuario
+
+
+unión en django Forenkey
+
+-CONECTAR A POSSGREESSSQL(BASE DE DATOS MAS ROBUSTA)
+*settings de el proyecto*
+
+'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '(nombre de la bd)',
+        'USER': 'postgres',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '5432',
+
+como cambiar el nombre del departamento:
+class Meta:
+	verbose_name_plural= 'Areas de la Empresa'
+
+
+personalizar las tablas del administrador
+
+
+ista basada en clase
+primero se hace una importación de esa parte de django
+se importa el modelo
+se desarrolla el código por secciones con requerimientos
+
+Problemas con una relación Many to Many en Django - Stack Overflow en español
+
+detalle de las vistas basadas en clase:
+https://ccbv.co.uk/
+
+
+forms en django
+
+creamos forms.py en la app home
+
+(placeholder: poner un texto invisible bajo el input)
+
+widgets
+widgets ={
+            'titulo':forms.TextInput(
+                attrs={
+                    'placeholder':'ingrese el texto aqui'
+                }
+            )
+        }
+
+
+base HTML:
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/foundation.min.css' %}">
+
+</head>
+<body>
+    
+    {%block content%} {%end blockcontent%}
+
+
+
+    <script src="{% static 'js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'js/vendor/what-input.js' %}"></script>
+    <script src="{% static 'js/vendor/foundation.min.js' %}"></script>
+    <script>
+      $(document).foundation();
+    </script>
+</body>
+</html>
+
+
+
+stm con django.
+crm (averiguar)
+
+
+
+
+

@@ -1,0 +1,67 @@
+{% include 'base.html' %}
+
+
+{% block title %}
+    Crear Empleado
+{% endblock title %}
+    
+
+
+{% block content %}
+    
+<div class="grid-container">
+  <div class="grid-x">
+    <h1 class="cell">Registrar empelado</h1>
+    <form class="cell grid-x grid-margin-x" method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+      <div class="medium-6 cell">
+        <label>Nombres:
+          
+        </label>
+      </div>
+      <div class="medium-6 cell">
+        <label>Apellidos:
+          
+        </label>
+      </div>
+      <div class="medium-6 cell">
+        <label>Trabajo:
+          
+        </label>
+      </div>
+      <div class="medium-6 cell">
+        <label>Departamento:
+          
+        </label>
+      </div>
+      <div class="medium-12 cell">
+        <label>Habilidades:
+          
+        </label>
+      </div>
+      <div class="medium-12 cell">
+        <label>foto:
+          
+        </label>
+      </div>
+      <div class="medium-12 cell">
+        <button type="submit" class="button success">Guardar</button>
+      </div>
+
+    </form>
+  </div>
+
+
+{% endblock content %}
+    
+
+
+
+
+
+<h2>Probando Create View</h2>
+
+<form method="POST">{% csrf_token %}
+    {{ form }}
+    <button type="submit">Agregar</button>
+</form>
